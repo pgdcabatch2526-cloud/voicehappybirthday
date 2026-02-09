@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Birthday Interaction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="glass-panel" id="card">
+        
+        <div id="step-1" class="visible">
+            <div class="ai-avatar">🤖</div>
+            <h1>Birthday AI</h1>
+            <p>I have a question for you.</p>
+            <button class="btn-main" onclick="activateAI()">Click to Talk</button>
+        </div>
+
+        <div id="step-2" class="hidden">
+            <div class="ai-avatar" id="avatar-2">🤖</div>
+            <p id="ai-status">Listening...</p>
+            <input type="text" id="nameInput" placeholder="Type name here..." autocomplete="off" onkeypress="handleEnter(event)">
+            <br>
+            <button class="btn-main" onclick="submitName()">Enter</button>
+        </div>
+
+        <div id="step-3" class="hidden">
+            <div class="ai-avatar speaking">🎂</div>
+            <h1>Happy Birthday!</h1>
+            <div class="celebration-name" id="finalName">Name</div>
+            <p>🎶 Music Playing... 🎶</p>
+            <button onclick="location.reload()" style="background:none; border:1px solid white; color:white; padding:10px 20px; border-radius:20px; cursor:pointer; margin-top:20px;">Restart</button>
+        </div>
+
+    </div>
+<script  src="script.js"></script>
+    
+</body>
+</html>
